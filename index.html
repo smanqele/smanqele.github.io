@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sihle Manqele - Personal Profile</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8; /* Light gray background */
+        }
+        .banner-home, .banner-campaigns, .banner-content { /* Added new banners */
+            background-color: #FFFACD; /* Light yellow */
+            padding: 2rem 0;
+            text-align: center;
+        }
+        .banner-blog {
+            background-color: #FFFACD; /* Light yellow */
+            padding: 2rem 0;
+            text-align: center;
+        }
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            transform: translateY(-2px);
+            color: #4A90E2; /* A nice blue for hover effect */
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Top Banner -->
+    <header class="bg-gray-900 text-white p-4 shadow-lg">
+        <div class="container mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <img src="sihle_cape_town_p2.jpg" alt="Sihle Manqele" class="w-16 h-16 rounded-full border-4 border-white object-cover shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/64x64/cccccc/333333?text=Profile';">
+                <h1 class="text-3xl font-bold tracking-wide">Sihle Manqele</h1>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#" class="nav-link text-lg font-medium" onclick="showTab('home')">Home</a></li>
+                    <li><a href="#" class="nav-link text-lg font-medium" onclick="showTab('blog')">Blog</a></li>
+                    <li><a href="#" class="nav-link text-lg font-medium" onclick="showTab('campaigns')">Campaigns</a></li>
+                    <li><a href="#" class="nav-link text-lg font-medium" onclick="showTab('content')">Content</a></li>
+                    <li><a href="#" class="nav-link text-lg font-medium" onclick="showTab('support')">Support</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Content Area -->
+    <main class="container mx-auto my-8 p-6 bg-white rounded-lg shadow-xl">
+
+        <!-- Home Tab Content -->
+        <section id="home-content" class="tab-content active">
+            <div class="banner-home rounded-lg mb-8 shadow-md">
+                <h2 class="text-4xl font-extrabold text-gray-900">Welcome to My Profile!</h2>
+                <p class="text-xl text-gray-700 mt-2">Discover my journey and passions.</p>
+            </div>
+
+            <!-- This section will be populated by Jekyll from your Markdown content -->
+            <div id="home-markdown-content" class="prose lg:prose-xl max-w-none">
+                <!-- Content from _includes/home_content.md will be rendered here by Jekyll -->
+                <!-- For now, it's just a placeholder to show structure -->
+                <h3 class="text-2xl font-semibold mb-4 text-gray-800">About Me</h3>
+                <p class="mb-4">I am Sihle Manqele, founder and chief architect at ImvunoTech ("Imvuno"). I consider my focus to be fuelled more by entrepreneurial ambitions than ever before in my technical experience as a Software Developer. While I have been enjoying the technical deep dives of various kinds and in different contexts, there is a better appreciation for building systems that solve real problems and/ create opportunities at a startup level and for various types of domains.</p>
+
+                <h3 class="text-2xl font-semibold mb-4 text-gray-800">My Interests</h3>
+                <p class="mb-4">One of the domains I am highly interested in is Agriculture, within the African context. This is a thriving sector in Africa, but it is besieged by many production issues that often cause big losses, some anticipated (for example bad road infrastructure causing delays) and some not (infections that affect crops or livestock). I am also interested in improving the efficiencies in these operations, like better water management or crop rotation strategies. Hemp farming seems to be exciting to many in the West, especially the by-product of that process being value added products like hempcrete and other products in cosmetics or food production. A lot of these capabilities can bring added employment and add to a country's fiscus. I am pushing for a "Hemp Growers' Association" within the African context to have this awareness and to find training that can help to realise these ideals, preferably with the help of business incubators.</p>
+                <p class="mb-4">Artificial Intelligence (AI) has been at the forefront of this thinking, and I am here appealing to visionaries or potential future investors to help me accomplish some productive concepts that I need to build products for. I discuss some of these concepts in my blog posts here.</p>
+
+                <h3 class="text-2xl font-semibold mb-4 text-gray-800">My Family</h3>
+                <p class="mb-4">I am a husband, and father who grew up on the sunny coast of Durban, Kwa-Zulu Natal. I enjoy instilling thoughtfulness in my boys by playing chess and other mind games. My lovely wife and our boys are the ones helping me re-discover a voice I thought I never had as a boy growing under the Apartheid system in South Africa.</p>
+
+                <h3 class="text-2xl font-semibold mb-4 text-gray-800">Life in the Netherlands</h3>
+                <p class="mb-4">I am based in a lovely and welcoming North Brabant city of Eindhoven, in the Netherlands. I really did not know what to expect from the Netherlands communities as I arrived out of a necessity to make a living. I consult on behalf of Luxoft using my Application engineering knowledge. I put simplicity as a focus to my approach in everything I do.</p>
+
+                <h3 class="text-2xl font-semibold mb-4 text-gray-800">Overall</h3>
+                <p class="mb-4">I am friendly, approachable and spiritually driven. I have developed an inkling for content creation, and I would appreciate your feedback on my material.</p>
+
+                <h3 class="text-2xl font-semibold mb-4 text-gray-800">Check out these links</h3>
+                <ul class="list-disc list-inside space-y-2">
+                    <li><a href="https://imvunopatreon.github.io/imvunotech/" target="_blank" class="text-blue-600 hover:underline">ImvunoTech</a></li>
+                    <li><a href="https://medium.com/@sihlemanqele" target="_blank" class="text-blue-600 hover:underline">Published material</a></li>
+                    <li><a href="https://www.linkedin.com/in/sihlemanqele/" target="_blank" class="text-blue-600 hover:underline">Profile (LinkedIn)</a></li>
+                    <li>Email: <a href="mailto:sihle.manqele@gmail.com" class="text-blue-600 hover:underline">sihle.manqele@gmail.com</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Blog Tab Content -->
+        <section id="blog-content" class="tab-content">
+            <div class="banner-blog rounded-lg mb-8 shadow-md">
+                <h2 class="text-4xl font-extrabold text-gray-900">My Blog</h2>
+                <p class="text-xl text-gray-700 mt-2">Thoughts, insights, and stories.</p>
+            </div>
+            <div class="prose lg:prose-xl max-w-none">
+                <p class="text-center text-gray-600 text-lg">Coming soon! Check back later for exciting blog posts.</p>
+            </div>
+        </section>
+
+        <!-- Campaigns Tab Content -->
+        <section id="campaigns-content" class="tab-content">
+            <div class="banner-campaigns rounded-lg mb-8 shadow-md">
+                <h2 class="text-4xl font-extrabold text-gray-900">Support My Campaigns</h2>
+                <p class="text-xl text-gray-700 mt-2">Find out how you can contribute to my initiatives.</p>
+            </div>
+            <div class="prose lg:prose-xl max-w-none">
+                <h3 class="text-2xl font-semibold mb-4 text-gray-800">Current Campaigns</h3>
+                <ul class="list-disc list-inside space-y-4">
+                    <!-- This content would be generated by Jekyll from _config.yml data -->
+                    <!-- For local preview, hardcoding some examples -->
+                    <li>
+                        <a href="https://gofundme.com/my-campaign" target="_blank" class="text-blue-600 hover:underline text-lg font-medium">My GoFundMe: Support My New Project!</a>
+                        <p class="text-gray-700 text-base ml-4">Help bring my latest venture to life by contributing to this crowdfunding campaign.</p>
+                    </li>
+                    <li>
+                        <a href="https://patreon.com/sihlemanqele" target="_blank" class="text-blue-600 hover:underline text-lg font-medium">Patreon Support: Become a Patron!</a>
+                        <p class="text-gray-700 text-base ml-4">Join my community on Patreon for exclusive content, early access, and direct engagement.</p>
+                    </li>
+                    <!-- End of hardcoded examples -->
+                </ul>
+                <p class="text-gray-600 mt-6">More campaigns coming soon!</p>
+            </div>
+        </section>
+
+        <!-- Content Tab Content -->
+        <section id="content-content" class="tab-content">
+            <div class="banner-content rounded-lg mb-8 shadow-md">
+                <h2 class="text-4xl font-extrabold text-gray-900">My Content</h2>
+                <p class="text-xl text-gray-700 mt-2">Explore my videos, articles, and other creative work.</p>
+            </div>
+            <div class="prose lg:prose-xl max-w-none">
+                <h3 class="text-2xl font-semibold mb-4 text-gray-800">YouTube Videos</h3>
+                <ul class="list-disc list-inside space-y-4">
+                    <!-- This content would be generated by Jekyll from _config.yml data -->
+                    <!-- For local preview, hardcoding some examples -->
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=xxxxxxxx1" target="_blank" class="text-blue-600 hover:underline text-lg font-medium">My First AI Video</a>
+                        <p class="text-gray-700 text-base ml-4">An introduction to the basics of Artificial Intelligence and its applications.</p>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=xxxxxxxx2" target="_blank" class="text-blue-600 hover:underline text-lg font-medium">African Agriculture Deep Dive</a>
+                        <p class="text-gray-700 text-base ml-4">Exploring the challenges and opportunities in the agricultural sector across Africa.</p>
+                    </li>
+                    <!-- End of hardcoded examples -->
+                </ul>
+                <p class="text-gray-600 mt-6">Stay tuned for more content!</p>
+            </div>
+        </section>
+
+        <!-- Support Tab Content -->
+        <section id="support-content" class="tab-content">
+            <div class="banner-home rounded-lg mb-8 shadow-md">
+                <h2 class="text-4xl font-extrabold text-gray-900">Support My Work</h2>
+                <p class="text-xl text-gray-700 mt-2">Your support helps me create more!</p>
+            </div>
+            <div class="prose lg:prose-xl max-w-none text-center">
+                <p class="text-lg mb-6">If you enjoy my work or find my content helpful, consider supporting me on Ko-fi!</p>
+                <a href="https://ko-fi.com/sihlemanq" target="_blank" class="inline-block bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
+                    Support me on Ko-fi!
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Me Section -->
+        <section id="contact-me" class="mt-12 p-8 bg-gray-50 rounded-lg shadow-inner">
+            <h2 class="text-3xl font-extrabold text-gray-900 text-center mb-6">Contact Me</h2>
+            <!-- Formspree integration: Replace the 'action' attribute with your Formspree endpoint -->
+            <!-- Go to formspree.io, create a new form, and copy your unique endpoint URL -->
+            <form id="contactForm" action="https://formspree.io/f/xanjldwl" method="POST" class="max-w-xl mx-auto space-y-6">
+                <div>
+                    <label for="name" class="block text-lg font-medium text-gray-700 mb-2">Your Name</label>
+                    <input type="text" id="name" name="name" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-gray-900" required>
+                </div>
+                <div>
+                    <label for="email" class="block text-lg font-medium text-gray-700 mb-2">Your Email</label>
+                    <input type="email" id="email" name="_replyto" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-gray-900" required>
+                </div>
+                <div>
+                    <label for="subject" class="block text-lg font-medium text-gray-700 mb-2">Subject</label>
+                    <input type="text" id="subject" name="_subject" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-gray-900" required>
+                </div>
+                <div>
+                    <label for="message" class="block text-lg font-medium text-gray-700 mb-2">Message</label>
+                    <textarea id="message" name="message" rows="6" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-gray-900" required></textarea>
+                </div>
+                <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out">
+                    Send Message
+                </button>
+            </form>
+            <div id="form-message" class="mt-4 text-center text-lg font-medium"></div>
+        </section>
+
+    </main>
+
+    <script>
+        // JavaScript for tab switching
+        function showTab(tabId) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById(tabId + '-content').classList.add('active');
+
+            // Update banner text and visibility based on the active tab
+            // Note: Banners will reuse the light yellow background from banner-home/blog/campaigns/content
+            const banners = {
+                'home': { h2: "Welcome to My Profile!", p: "Discover my journey and passions." },
+                'blog': { h2: "My Blog", p: "Thoughts, insights, and stories." },
+                'campaigns': { h2: "Support My Campaigns", p: "Find out how you can contribute to my initiatives." },
+                'content': { h2: "My Content", p: "Explore my videos, articles, and other creative work." },
+                'support': { h2: "Support My Work", p: "Your support helps me create more!" }
+            };
+
+            const activeBannerElement = document.querySelector(`#${tabId}-content .banner-home, #${tabId}-content .banner-blog, #${tabId}-content .banner-campaigns, #${tabId}-content .banner-content`);
+            if (activeBannerElement) {
+                const h2Element = activeBannerElement.querySelector('h2');
+                const pElement = activeBannerElement.querySelector('p');
+                if (h2Element && pElement && banners[tabId]) {
+                    h2Element.textContent = banners[tabId].h2;
+                    pElement.textContent = banners[tabId].p;
+                }
+            }
+        }
+
+        // JavaScript for handling Formspree submission feedback
+        document.getElementById('contactForm').addEventListener('submit', async function(event) {
+            event.preventDefault(); // Prevent default submission if using AJAX
+
+            const formMessage = document.getElementById('form-message');
+            formMessage.textContent = 'Sending your message...';
+            formMessage.classList.remove('text-red-500', 'text-green-500', 'text-gray-600');
+            formMessage.classList.add('text-blue-500');
+
+            const form = event.target;
+            const data = new FormData(form);
+
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    formMessage.textContent = 'Message sent successfully!';
+                    formMessage.classList.remove('text-blue-500');
+                    formMessage.classList.add('text-green-500');
+                    form.reset(); // Clear the form
+                } else {
+                    const responseData = await response.json();
+                    if (responseData.errors) {
+                        formMessage.textContent = 'Error: ' + responseData.errors.map(e => e.message).join(', ');
+                    } else {
+                        formMessage.textContent = 'An error occurred while sending your message.';
+                    }
+                    formMessage.classList.remove('text-blue-500');
+                    formMessage.classList.add('text-red-500');
+                }
+            } catch (error) {
+                console.error('Network error:', error);
+                formMessage.textContent = 'Network error. Please try again later.';
+                formMessage.classList.remove('text-blue-500');
+                formMessage.classList.add('text-red-500');
+            }
+        });
+
+        // Initialize the home tab on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            showTab('home');
+        });
+    </script>
+</body>
+</html>
